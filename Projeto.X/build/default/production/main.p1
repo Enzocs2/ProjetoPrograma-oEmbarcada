@@ -1,0 +1,43 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"24 ./ssd.h
+[; ;./ssd.h: 24:  void ssdInit(void);
+[v _ssdInit `(v ~T0 @X0 0 ef ]
+"26 ./pwm.h
+[; ;./pwm.h: 26:  void pwmInit(void);
+[v _pwmInit `(v ~T0 @X0 0 ef ]
+"4 ./funcoes.h
+[; ;./funcoes.h: 4: void standBy();
+[v _standBy `(v ~T0 @X0 0 e? ]
+"5
+[; ;./funcoes.h: 5: void menu();
+[v _menu `(v ~T0 @X0 0 e? ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"10 main.c
+[; ;main.c: 10: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"11
+[; ;main.c: 11:     (*(volatile __near unsigned char*)0xF94)=0b00000000;
+[e = *U -> -> 3988 `i `*VNuc -> -> 0 `i `uc ]
+"12
+[; ;main.c: 12:     (*(volatile __near unsigned char*)0xF96)=0x00;
+[e = *U -> -> 3990 `i `*VNuc -> -> 0 `i `uc ]
+"13
+[; ;main.c: 13:     ssdInit();
+[e ( _ssdInit ..  ]
+"14
+[; ;main.c: 14:     pwmInit();
+[e ( _pwmInit ..  ]
+"15
+[; ;main.c: 15:     standBy();
+[e ( _standBy ..  ]
+"16
+[; ;main.c: 16:     menu();
+[e ( _menu ..  ]
+"17
+[; ;main.c: 17: }
+[e :UE 1 ]
+}
